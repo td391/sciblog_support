@@ -1,4 +1,4 @@
-DEVELOPMENT = False
+DEVELOPMENT = True
 PORT = 5000
 
 
