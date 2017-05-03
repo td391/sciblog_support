@@ -1,11 +1,12 @@
 # CNTK flask
 ```
-sudo apt-get install openmpi-bin python3-pip python3-venv
-python3 -m venv ./venv
-source venv/bin/activate
-pip install -I pip
+sudo apt-get install openmpi-bin
+conda update conda pip
+conda create --name p35 python=3.5 flask Pillow requests cherrypy
+source activate p35
 pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc2-cp35-cp35m-linux_x86_64.whl
-pip install flask Pillow requests paste cherrypy
+pip install aiohttp paste 
 wget https://www.cntk.ai/Models/Caffe_Converted/ResNet152_ImageNet.model
+python cntk_api.py
 ```
 
